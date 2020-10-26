@@ -2,4 +2,6 @@
 
 //affiche un article publié
 
+
+
 ?>

@@ -1,5 +1,7 @@
 <?php 
 
-//affiche la liste des articles
+//page pour afficher la liste des articles
+
+
 
 ?>
