@@ -41,5 +41,55 @@ $pdo = new PDO('mysql:host=mysql;dbname=miniblog;host=127.0.0.1', 'root', '', [
 //INNER JOIN article a
 //ON a.ID_category = c.ID
 
+//créer slug : https://www.webslesson.info/2018/06/how-to-create-unique-url-slug-in-php.html
+//ATTENTION VERIFIER NOM VARIABLES DANS LE HTML
+$slug = '';
+
+if (isset ($_GET["ville"]))
+{
+    $slug = preg_replace('/[^a-z0-9]+/i', '-',  trim(strtolower($_GET["title"])));
+
+
+    var_dump($slug);
+
+//vérifier cohérence avec ma BDD
+    //$query = "SELECT slug_url FROM slug WHERE slug_url LIKE '$slug%'";
+
+    $statement = $connect->prepare($query);
+    if($statement->execute())
+    {
+        $total_row = $statement->rowCount();
+        if($total_row > 0)
+        {
+            $result = $statement->fetchAll();
+            foreach($result as $row)
+            {
+                $data[] = $row['slug_url'];
+            }
+            if(in_array($slug, $data))
+            {
+                $count = 0;
+                while(in_array(($slug . '-' . ++ $count), $data) );
+                $slug = $slug . '-' . $count;
+            }
+        }
+    }
+
+    $insert_data = array(
+        ':slug_title' => $_GET["title"],
+        ':slug_url' => $slug
+    );
+
+    $query = "INSERT INTO slug (slug_title, slug_url) VALUES (:slug_title, :slug_url)";
+    $statement = $connect->prepare($query);
+    $statement->execute($insert_data);
+
+}
+
+
+//dans le title entre deux balises php
+
+echo $slug,
+
 
 ?>
