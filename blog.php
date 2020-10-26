@@ -1,13 +1,15 @@
 <?php 
 
+//NOTES, ESSAIS ET RECHERCHES POUR LE PROJET MINIBLOG
+
+
 //Simulateur de blog
 
 //Article : ID, title, content, created at, updated at, slug, category_id (relié à category name)
 //Category : ID (ai), category name, slug
 
 
-//se connecter à la base de données
-//connecter les deux tables l'une à l'autre avec JOIN
+//se connecter à la base de données avec JOIN
 //pouvoir afficher un article en cliquant sur son titre
 //pouvoir afficher un article en cliquant sur sa catégorie
 //pouvoir afficher un article en cliquant sur sa date
@@ -34,10 +36,10 @@ $pdo = new PDO('mysql:host=mysql;dbname=miniblog;host=127.0.0.1', 'root', '', [
 //je récupère les données de la table category INNER JOIN = jointure interne avec la table article
 //la clause ON fait a liaison entre les deux champs
 //alias : a = table article, c = table category, name_category = ID_category de la table article, category_all = category_name de la table category
-SELECT a.ID_category AS name_category,  c.category_name AS category_all
-FROM category c
-INNER JOIN article a
-ON a.ID_category = c.ID
+//SELECT a.ID_category AS name_category,  c.category_name AS category_all
+//FROM category c
+//INNER JOIN article a
+//ON a.ID_category = c.ID
 
 
 ?>
