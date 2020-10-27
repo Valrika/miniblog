@@ -17,16 +17,17 @@ require('blog.php');
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-
+<body>
 <header>
-    <div class="navbar-header "></div>
-    <div class="container">
+    <div class="navbar-header"></div>
+    <div class="d-flex justify-content-center">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="home.php">Accueil</a>
-            <a class="navbar-brand" href="articles.php">Articles</a>
-            <a class="navbar-brand" href="#">A propos</a>
-            <a class="navbar-brand" href="#">Contact</a>
-            <a class="navbar-brand" href="create_article.php">créer un article</a>
+            <a class="navbar-brand" href="articles.php">Sport</a>
+            <a class="navbar-brand" href="#">Nutrition</a>
+            <a class="navbar-brand" href="#">Mompreneuse</a>
+            <a class="navbar-brand" href="#">About</a>
+            <a class="navbar-brand" href="create_article.php">Créer un article</a>
 
         </nav>
     </div>
@@ -46,6 +47,8 @@ require('blog.php');
 
 
 //boucle qui récupère en php tous les articles pour remplacer la page
+
+<div
 
 
 ?>
