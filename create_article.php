@@ -9,11 +9,9 @@
 
 //rediriger vers une page "article bien envoyé"
 
-name = "article"
-
-
-
 //ATTENTION VERIFIER NOM VARIABLES DANS LE HTML
+
+
 $slug = '';
 
 if (isset ($_POST["create"]))
@@ -56,10 +54,11 @@ $statement->execute($insert_data);
 
 //dans le title entre deux balises php
 
-echo $slug,
+echo $slug;
 
 
 ?>
+
 <html lang="fr">
 <head>
     <title>Beaute O Naturel</title>
