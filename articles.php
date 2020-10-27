@@ -1,117 +1,92 @@
 <?php
 
-//page qui affiche tous les articles publiés
+//Page qui récupère tous les articles publiés et insérés dans la base de données pour les afficher dans l'ordre antichronologique
+
+//TODO modifier ID_catégory pour mettre à la place le name de la catégorie (select juste sur un index ?)
+//Afficher un nombre d'articles maximum par page ?
 
 require('blog.php');
-//require('header.php');
-
+//
 
 ?>
 
 <html lang="fr">
-<head>
-    <title>Beaute O Naturel</title>
-    <meta charset="UFT-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--css bootstrap-->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-<header>
-    <div class="navbar-header"></div>
-    <div class="d-flex justify-content-center">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="home.php">Accueil</a>
-            <a class="navbar-brand" href="articles.php">Sport</a>
-            <a class="navbar-brand" href="#">Nutrition</a>
-            <a class="navbar-brand" href="#">Mompreneuse</a>
-            <a class="navbar-brand" href="#">About</a>
-            <a class="navbar-brand" href="create_article.php">Créer un article</a>
+    <head>
+        <title>Beaute O Naturel</title>
+        <meta charset="UFT-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--css bootstrap-->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
 
-        </nav>
-    </div>
-
-</header>
-
-<br>
-<br>
 
 <body>
-</div>
-
-<?php
-
-//afficher un seul article avec son titre, sa date de création, son contenu et son image
-//afficher tous les articles les un à la suite des autres dans l'ordre antechronologique
-
-
-//boucle qui récupère en php tous les articles pour remplacer la page
-
-<div
-
-
-?>
-
-<!--titre de la catégorie-->
-<h6 class="text-center">
-    <?php 
-        $category = $pdo->query('SELECT category_name FROM category');
-        $category = $category->fetch();
-            echo $category['category_name']; 
-    ?>
-</h6>
-
-<!--titre de l'article-->
-<h3 class="text-center">
-    <?php
-        $title = $pdo->query('SELECT title FROM article');
-        $title = $title->fetch();
-            echo $title['title'];
-    ?>
-</h3><br>
-<br>
-
-<!--date de création de l'article-->
-<h6 class="text-center">
-    <?php
-        $date = $pdo->query('SELECT created_at FROM article');
-        $date = $date->fetch();
-            echo $date['created_at'];
-    ?>
-</h6>
-
-<!--TODO Ajouter champ pour afficher la date de mise à jour de l'article-->
-    <?php
-        $update = $pdo->query('SELECT updated_at FROM article');
-        $update = $update->fetch();
-            echo $update['updated_at'];
-    ?>
-
-
-<!--Image d'illustration-->
-<div class="d-flex justify-content-center">
-
-    <img src=
-        <?php 
-            $image = $pdo->query('SELECT image FROM article');
-            $image= $image->fetch();
-                echo $image['image'];
-        ?> 
-        class="align-content-center" alt="femme en tenue de sport qui pratique la marche" width="50%">
-</div>
-
-<!--Ajouter un champ html autour du php
-pour le contenu de l'article. J'ai déjà entré du lorem ipsum dans la BDD sous le nom 'content'-->
 
     <?php
-        $content = $pdo->query('SELECT content FROM article');
-        $content = $content->fetch();
-            echo $content['content'];
+        require('header.php');
     ?>
 
-<!--appelle le footer-->
-<?php require('footer.php'); ?>
+    <br>
+    <br>
+
+    <?php
+
+    //afficher un nombre d'article maximum par page ?
+
+
+        $all_articles = $pdo->query('SELECT * FROM article ORDER BY created_at DESC');
+        $display_articles = $all_articles->fetchAll();
+
+
+        //boucle for qui affiche tous les articles avec titre, auteur, date de création, date de modification, image, contenu
+
+        foreach ($display_articles as $item)
+
+            {
+    ?>
+
+                <!--titre de la catégorie-->
+                <h6 class="text-center">
+                    <?php echo $item['ID_category'];?> 
+                </h6>
+
+                <!--titre de l'article-->
+                <h3 class="text-center">
+                    <?php echo $item['title'];?>
+                </h3><br>
+
+
+                <!--TODO Ajouter un champ avec le nom de l'auteur-->
+                <?php echo $item['author_name'];?>
+
+                <!--date de création de l'article-->
+                <h6 class="text-center">
+                    <?php echo $item['created_at'];?>
+                </h6>
+
+                <!--TODO Ajouter champ pour afficher la date de mise à jour de l'article-->
+                <?php echo $item['updated_at'];?>
+
+        
+                <!--Image d'illustration-->
+                <div class="d-flex justify-content-center">
+                    <img src=
+                        <?php echo $item['image'];?>
+                    class="align-content-center" alt="femme en tenue de sport qui pratique la marche" width="50%">
+                </div>
+
+                <!--TODO Ajouter un champ html pour le contenu de l'article. J'ai déjà entré du lorem ipsum dans la BDD sous le nom 'content'-->
+                <?php echo $item['content'];?>
+    
+            <?php
+            }
+            ?>
+
+    <br>
+
+    <!--appelle le footer-->
+    <?php require('footer.php'); ?>
 
 </body>
 

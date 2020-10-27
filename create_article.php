@@ -7,55 +7,7 @@
 //récupérer le contenu de l'article et le stocker dans la BDD
 //nom prénom date catégorie rédiger + envoyer
 
-//rediriger vers une page "article bien envoyé"
-
-//ATTENTION VERIFIER NOM VARIABLES DANS LE HTML
-
-
-$slug = '';
-
-if (isset ($_POST["create"]))
-{
-    $slug = preg_replace('/[^a-z0-9]+/i', '-',  trim(strtolower($_POST["title"])));
-
-//vérifier cohérence avec ma BDD
-    $query = "SELECT slug_url FROM slug WHERE slug_url LIKE '$slug%'";
-
-    $statement = $connect->prepare($query);
-    if($statement->execute())
-    {
-        $total_row = $statement->rowCount();
-        if($total_row > 0)
-        {
-            $result = $statement->fetchAll();
-            foreach($result as $row)
-            {
-                $data[] = $row['slug_url'];
-            }
-            if(in_array($slug, $data))
-            {
-                $count = 0;
-                while(in_array(($slug . '-' . ++ $count), $data) );
-                $slug = $slug . '-' . $count;
-            }
-        }
-    }
-
-$insert_data = array(
-    ':slug_title' => $_POST["title"],
-    ':slug_url' => $slug
-);
-
-$query = "INSERT INTO slug (slug_title, slug_url) VALUES (:slug_title, :slug_url)";
-$statement = $connect->prepare($query);
-$statement->execute($insert_data);
-
-}
-
-//dans le title entre deux balises php
-
-echo $slug;
-
+//echo "article bien envoyé"
 
 ?>
 
@@ -69,32 +21,18 @@ echo $slug;
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header>
-    <div class="navbar-header"></div>
-    <div class="d-flex justify-content-center">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="home.php">Accueil</a>
-            <a class="navbar-brand" href="articles.php">Sport</a>
-            <a class="navbar-brand" href="#">Nutrition</a>
-            <a class="navbar-brand" href="#">Mompreneuse</a>
-            <a class="navbar-brand" href="#">About</a>
-            <a class="navbar-brand" href="create_article.php">Créer un article</a>
 
-        </nav>
-    </div>
-<br>
-    <br>
-
-
-</header>
+<?php
+require('header.php');
+?>
 
 <form>
     <div class="form-row">
         <div class="col">
-            <input type="text" class="form-control" placeholder="First name">
+            <input type="text" class="form-control" placeholder="Nom de l'auteur">
         </div>
         <div class="col">
-            <input type="text" class="form-control" placeholder="Last name">
+            <input type="text" class="form-control" placeholder="Titre de l'article">
         </div>
     </div>
 </form>
