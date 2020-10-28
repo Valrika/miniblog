@@ -1,3 +1,165 @@
-header{
-    background-color: #8fd19e;
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* La Barre de navigation*/
+
+.navbar{
+
+    border-radius: 5px;
+    margin-bottom: 20px;
+
+}
+
+.navbar-brand{
+    color: #999;
+}
+
+/* le footer*/
+
+/* Footer de la page d'accueil*/
+p
+{
+    color: #999;
+    line-height: 25px;
+}
+
+h2,h3{
+    color:#f9c0c0;
+}
+
+h2{
+    font-size: 18px;
+}
+
+
+.segment-two h2{
+    color: #f9c0c0;
+    text-transform: uppercase;
+}
+
+.segment-two h2:before{
+    content: '|';
+    color: #ccf6c8;
+    padding-right: 10px;
+}
+.segment-two ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.segment-two ul li{
+   border-bottom: 1px solid rgba(255,255,255,0.3);
+    line-height: 40px;
+}
+
+.segment-two ul li a{
+    color: #999;
+    text-decoration: none;
+}
+
+.segment-three h2{
+    color: #f9c0c0;
+    text-transform: uppercase;
+}
+
+.segment-three h2:before{
+    content: '|';
+    color: #ccf6c8;
+    padding-right: 10px;
+}
+
+.segment-three a{
+    background: #ccf6c8;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.segment-three a i{
+    font-size: 20px;
+    color: #f9c0c0;
+    padding: 10px 12px;
+}
+
+.segment-four h2{
+    color: #f9c0c0;
+    text-transform: uppercase;
+}
+
+.segment-four h2:before{
+    content: '|';
+    color: #ccf6c8;
+    padding-right: 10px;
+}
+
+.segment-four form input[type=submit]{
+    background: #ccf6c8;
+    border: none;
+    padding: 3px 15px;
+    margin-left: -5px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.footer{
+    align-content: space-between;
+    background: #fdffdc;
+    color: #999;
+    position: absolute;
+
+}
+
+.footer-bottom-text{
+    background: #ccf6c8;
+    color: #999;
+    text-align: center;
+    height: 50px;
+}
+
+/* juste pour la page footer.php*/
+.footer-bottom-tex{
+    background: #ccf6c8;
+    text-align: center;
+    height: 65px;
+
+
+}
+
+/* Page create article*/
+
+
+.btn{
+    color: #f9c0c0;
+    background-color: #ccf6c8;
+    text-align: center;
+}
+
+.titre{
+    color: #f9c0c0;
+    text-align: center;
+}
+
+
+/*Responsive CSS*/
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    .md-mb-30{
+        margin-bottom: 30px;
+    }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 991px){
+
+    .md-mb-30{
+        margin-bottom: 30px;
+    }{
+        margin-bottom: 30px;
+    }
+        .footer-top{
+        padding: 50px 0;
+        }
 }
