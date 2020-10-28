@@ -61,7 +61,6 @@ echo $slug;
 
 ?>
 <html lang="fr">
-
 <head>
     <title>Beaute O Naturel</title>
     <meta charset="UFT-8">
@@ -70,19 +69,19 @@ echo $slug;
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-
 <header>
-    <div class="navbar-header">
-        <div class="d-flex justify-content-center">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="home.php">Accueil</a>
-                <a class="navbar-brand" href="articles.php">Articles</a>
-                <a class="navbar-brand" href="footer.php">A Propos</a>
-                <a class="navbar-brand" href="create_article.php">Créer un article</a>
-            </nav>
-        </div>
+    <div class="navbar-header"></div>
+    <div class="d-flex justify-content-center">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="home.php">Accueil</a>
+            <a class="navbar-brand" href="articles.php">Sport</a>
+            <a class="navbar-brand" href="#">Nutrition</a>
+            <a class="navbar-brand" href="#">Mompreneuse</a>
+            <a class="navbar-brand" href="#">About</a>
+            <a class="navbar-brand" href="create_article.php">Créer un article</a>
+
+        </nav>
     </div>
 <br>
     <br>
@@ -90,8 +89,6 @@ echo $slug;
 
 </header>
 
-<br>
-<br>
 <form>
     <div class="form-row">
         <div class="col">
@@ -102,8 +99,7 @@ echo $slug;
         </div>
     </div>
 </form>
-<br>
-<br>
+
 <div class="col-md-3 mb-3">
     <label for="validationCustom04">Catégories</label>
     <select class="custom-select" id="validationCustom04" required>
@@ -116,33 +112,23 @@ echo $slug;
         Please select a valid state.
     </div>
 </div>
-<br>
-<br>
 <div class="col-md-3 mb-3">
     <label for="validationCustom05">Date</label>
     <input type="text" class="form-control" id="validationCustom05" required>
-    <div class="invalid-feedback"></div>
-</div>
-
-<div class="col-md-3 mb-3">
-    <label for="validationCustom05">Update</label>
-    <input type="text" class="form-control" id="validationCustom05" required>
     <div class="invalid-feedback">
+        Please provide a valid zip.
     </div>
 </div>
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">Example textarea</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+<button type="submit" class="btn btn-primary">Submit</button>
+</form>
 
-<br>
-<br>
+<footer>
 
-<div class="form-group">
-    <label for="exampleFormControlTextarea1">Example textarea</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-</div>
-<button type="submit" class="btn">Submit</button>
-<br>
-<br>
-<br>
-
+</footer>
 
 </body>
 
