@@ -29,7 +29,7 @@
         <nav class="navbar navbar-expand-lg">
             <a class="navbar-brand" href="home.php">Accueil</a>
             <a class="navbar-brand" href="articles.php">Articles</a>
-            <a class="navbar-brand" href="footer.php">A Propos</a>
+            <a class="navbar-brand" href="header.php">A Propos</a>
             <a class="navbar-brand" href="create_article.php">Créer un article</a>
 
         </nav>
@@ -56,7 +56,7 @@
         <div class="row">
         <div class="d-flex p-2 align-content-around">
             <div class="col-md-3 segment-one md-mb-30 md-mb-30">
-                <!-- colonne 1 PRESENTATION du site-->
+                <!-- Bcolonne 1 PRESENTATION du site-->
                     <h3>Belle O Naturel</h3>
                     <p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
                         printer took a galley of type and scrambled it to make a type specimen book. It has survived not </p>
