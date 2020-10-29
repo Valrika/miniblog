@@ -5,41 +5,25 @@
 //TODO modifier ID_catégory pour mettre à la place le name de la catégorie (select juste sur un index ?)
 //Afficher un nombre d'articles maximum par page ?
 
-require('blog.php');
 //
 
 ?>
 
-<html lang="fr">
-    <head>
-        <title>Beaute O Naturel</title>
-        <meta charset="UFT-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!--css bootstrap-->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/style.css">
-    </head>
+
+        <?php require('header.php'); ?>
 
 
-<body>
-
-    <?php
-        require('header.php');
-    ?>
-
-    <br>
-    <br>
+    
 
     <?php
 
     //afficher un nombre d'article maximum par page ?
 
-
-        $all_articles = $pdo->query('SELECT * FROM article ORDER BY created_at DESC');
+        //appelle la table article et range les articles dans l'ordre antichronologique en joignant la table category à l'entrée category_ID
+        $all_articles = $pdo->query("SELECT * FROM article LEFT JOIN category ON article.ID_category = category.ID ORDER BY article.created_at DESC");
         $display_articles = $all_articles->fetchAll();
 
-
-        //boucle for qui affiche tous les articles avec titre, auteur, date de création, date de modification, image, contenu
+        //boucle for qui affiche tous les articles avec nom de la catégorie, titre, auteur, date de création, date de modification, image, contenu
 
         foreach ($display_articles as $item)
 
@@ -47,10 +31,15 @@ require('blog.php');
     ?>
 
                 <!--titre de la catégorie-->
+                <!--je veux appeler la catégorie associée à chaque article
+                    catégorie qui se trouve dans une table différente : category
+                    mais associée à ID_category dans la table article-->
                 <h6 class="text-center">
-                    <?php echo $item['ID_category'];?> 
+                    <?php
+                    echo $item['category_name'];
+                    ?>
                 </h6>
-
+                
                 <!--titre de l'article-->
                 <h3 class="text-center">
                     <?php echo $item['title'];?>
@@ -85,9 +74,7 @@ require('blog.php');
 
     <br>
 
-    <!--appelle le footer-->
-    <?php require('footer.php'); ?>
-
+    <?php require('footer.html'); ?>
 </body>
 
 </html>

@@ -11,10 +11,4 @@
 //TODO remettre à l'endroit le format de la date
 
 
-
-//connexion à la base de données
-$pdo = new PDO('mysql:host=mysql;dbname=miniblog;host=127.0.0.1', 'root', '', [
-    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-    ]);
-
 ?>
