@@ -1,6 +1,4 @@
-<?php 
-
-
+<?php
 //page pour créer un article
 
 //récupérer le contenu du titre et le stocker dans la BDD
@@ -21,70 +19,62 @@
     <meta charset="UFT-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--css bootstrap-->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/31cfd28a45.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<header>
-    <div class="navbar-header"></div>
-    <div class="d-flex justify-content-center">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="home.php">Accueil</a>
-            <a class="navbar-brand" href="articles.php">Sport</a>
-            <a class="navbar-brand" href="#">Nutrition</a>
-            <a class="navbar-brand" href="#">Mompreneuse</a>
-            <a class="navbar-brand" href="#">About</a>
-            <a class="navbar-brand" href="create_article.php">Créer un article</a>
+<div class="titre">
+    <h1 class="display-4 mb-5">CREEZ VOTRE ARTICLE</h1>
+</div>
 
-        </nav>
-    </div>
-<br>
-    <br>
-
-
-</header>
-
-<form>
+<form class="mt-5">
+    <!--mise en place du formulaire avec   colonnes bootstrap-->
     <div class="form-row">
-        <div class="col">
-            <input type="text" class="form-control" placeholder="First name">
+
+        <!-- nom de l'auteur-->
+        <div class="form-group col-md-6">
+            <label>Nom de l'auteur</label>
+            <input type="text" class="form-control">
         </div>
-        <div class="col">
-            <input type="text" class="form-control" placeholder="Last name">
+
+        <!-- Titre de l'article-->
+        <div class="form-group col-md-6">
+            <label>Titre article</label>
+            <input type="text" class="form-control" placeholder="Titre article">
         </div>
-    </div>
-</form>
 
-<div class="col-md-3 mb-3">
-    <label for="validationCustom04">Catégories</label>
-    <select class="custom-select" id="validationCustom04" required>
-        <option selected disabled value="">Choisir...</option>
-        <option>Sport</option>
-        <option>Nutrition</option>
-        <option>Mompreneuse</option>
-    </select>
-    <div class="invalid-feedback">
-        Please select a valid state.
-    </div>
-</div>
-<div class="col-md-3 mb-3">
-    <label for="validationCustom05">Date</label>
-    <input type="text" class="form-control" id="validationCustom05" required>
-    <div class="invalid-feedback">
-        Please provide a valid zip.
-    </div>
-</div>
-    <div class="form-group">
-        <label for="exampleFormControlTextarea1">Example textarea</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-    </div>
-<button type="submit" class="btn btn-primary">Submit</button>
-</form>
 
-<footer>
+        <div class="form-group col-md-12 mt-2">
+            <label>Catégories</label>
+            <select class="custom-select" required>
+                <option selected disabled value="">Catégorie</option>
+                <option>Sport</option>
+                <option>Nutrition</option>
+                <option>Mompreneuse</option>
+            </select>
+        </div>
 
-</footer>
+        <div class="form-group col-md-6">
+            <label>Date</label>
+            <input type="text" class="form-control" placeholder="Date">
+        </div>
+
+        <div class="form-group col-md-6">
+            <label>Update</label>
+            <input type="text" class="form-control" placeholder="Update">
+        </div>
+
+        <div class="form-group col-md-6">
+            <label>Content</label>
+            <textarea class="form-control" rows="15"></textarea>
+        </div>
+
+        <div class="form-group col-md-12" style="text-align: center">
+            <button type="submit" class="btn">Submit</button>
+        </div>
+
+    </div>
 
 </body>
-
 </html>
