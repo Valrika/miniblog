@@ -15,6 +15,8 @@
     <!--css bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <!-- Fontawesome -->
+
     <script src="https://kit.fontawesome.com/31cfd28a45.js" crossorigin="anonymous"></script>
 </head>
 
@@ -29,27 +31,115 @@
         <nav class="navbar navbar-expand-lg">
             <a class="navbar-brand" href="home.php">Accueil</a>
             <a class="navbar-brand" href="articles.php">Articles</a>
-            <a class="navbar-brand" href="header.php">A Propos</a>
+            <a class="navbar-brand" href="footer.html">A Propos</a>
             <a class="navbar-brand" href="create_article.php">Créer un article</a>
 
         </nav>
     </div>
-</header>
+
 
 <!-- insertion de la bannière -->
     <div class="banniere">
         <img src="images/banniere.png" class="img-fluid" alt="responsive image">
     </div>
+</header>
 
-        <br>
-        <br>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aspernatur, autem blanditiis consectetur consequatur cumque delectus dolorum eaque excepturi exercitationem itaque magni modi molestiae perspiciatis placeat, possimus quasi reprehenderit vero!
-        </p>
+<br>
+<br>
+<br>
+
+<!-- Page wrapper -->
+<div class="page-wrapper">
+
+    <!-- Post slider -->
+    <div class="post-slider">
+        <h1 class="slider-title display-4">Articles à la une</h1>
+        <i class="fa fa-chevron-left prev"></i>
+        <i class="fa fa-chevron-right next"></i>
 <br>
         <br>
 
+        <div class="post-wrapper">
+
+            <div class="post">
+                <img src="images/marche.jpg" alt="" class="slider-image">
+                <div class="post-info">
+                    <h5><a href="articles.php">Les bienfaits de la marche à pieds</a></h5>
+                    <i class="fa fa-user">Valérie EKOUME</i>
+                    &nbsp;
+                    <i class="fa fa-calendar">Lundi 26 octobre</i>
+                </div>
+            </div>
+
+            <div class="post">
+                <img src="images/workingmom2.jpg" alt="" class="slider-image">
+                <div class="post-info">
+                    <h5><a href="articles.php">Maman à temps plein</a></h5>
+                    <i class="fa fa-user">Valérie EKOUME</i>
+                    &nbsp;
+                    <i class="fa fa-calendar">Lundi 26 octobre</i>
+                </div>
+            </div>
+
+            <div class="post">
+                <img src="images/bananas.jpg" alt="" class="slider-image">
+                <div class="post-info">
+                    <h5><a href="articles.php">Bananas !</a></h5>
+                    <i class="fa fa-user">Valérie EKOUME</i>
+                    &nbsp;
+                    <i class="fa fa-calendar">Lundi 26 octobre</i>
+                </div>
+            </div>
+
+            <div class="post">
+                <img src="images/piedsnus.jpg" alt="" class="slider-image">
+                <div class="post-info">
+                    <h5><a href="articles.php">Famille MonoParentale</a></h5>
+                    <i class="fa fa-user">Valérie EKOUME</i>
+                    &nbsp;
+                    <i class="fa fa-calendar">Lundi 26 octobre</i>
+                </div>
+            </div>
+
+            <div class="post">
+                <img src="images/drink.jpg" alt="" class="slider-image">
+                <div class="post-info">
+                    <h5><a href="articles.php">Besoin d'une pose</a></h5>
+                    <i class="fa fa-user">Valérie EKOUME</i>
+                    &nbsp;
+                    <i class="fa fa-calendar">Lundi 26 octobre</i>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Post slider -->
+
+
+</div>
+<!-- Page wrapper -->
+
+<!-- JQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+<!--Slick carroussel-->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<!-- Custom script -->
+<script src="js/scripts.js"></script>
+<br>
+        <br>
+<br>
+<br>
+
+
 <!-- Footer à 4 colones-->
+<footer class="bottom">
 
     <div class="footer-top align-content-between">
     <div class="container col-md-12">
@@ -73,7 +163,7 @@
                 </div>
 
                 <!-- colonne 3 MEDIA SOCIAUX-->
-            <
+
                 <div class="col-md-3 segment-three md-mb-30 md-mb-30">
                     <h2>FOLLOW US</h2>
                     <p>N'hésitez pas à nous suivre sur les réseaux sociaux, que l'on puisse continuer à partager nos
@@ -97,7 +187,7 @@
     </div>
     </div>
             <!-- Texte footer copyright-->
-        <footer>
+
         <p class="footer-bottom-text">All Right reserved by &copy;BelleONaturel.2019<p>
 
         </footer>

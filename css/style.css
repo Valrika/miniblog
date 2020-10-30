@@ -16,17 +16,74 @@
 .navbar-brand{
     color: #999;
 }
+/*PAGE WRAPPER*/
+.page-wrapper a:hover{
+    color: #f9c0c0;
+
+}
 
 /*POST SLIDER*/
 
 .post-slider{
-    border: 1px solid red;
+    position: relative;
+
+}
+
+.post-slider .slider-title{
+    text-align: center;
+    margin: 30px auto;
+    color: #f9c0c0;
+}
+
+.post-slider .next{
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    font-size: 2em;
+    color: #f9c0c0;
+    cursor: pointer;
+
+}
+
+.post-slider .prev{
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    font-size: 2em;
+    color: #f9c0c0;
+    cursor: pointer;
 }
 
 .post-slider .post-wrapper{
-    border: dashed red;
+    height: 350px;
+    width: 84%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding:.10px 0 10px 0;
+
 }
 
+.post-slider .post-wrapper .post{
+    height: 350px;
+    width: 84%;
+    margin: 0 10px;
+    display: inline-block;
+    background-color: white;
+}
+
+.post-slider .post-wrapper .post .post-info{
+    height: 130px;
+    padding: 0 5px;
+
+}
+
+.post-slider .post-wrapper .post .slider-image{
+    height: 290px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
 
 /* Footer de la page d'accueil*/
 p
@@ -164,6 +221,14 @@ h2{
     padding-top: 15px;
     padding-bottom: 15px;
     justify-content: center;
+
+}
+
+.footer-bottom-tex{
+    background-color: #ccf6c8;
+    text-align: center;
+    padding-bottom: 0.5px;
+
 
 }
 
