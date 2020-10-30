@@ -17,7 +17,16 @@
     color: #999;
 }
 
-/* le footer*/
+/*POST SLIDER*/
+
+.post-slider{
+    border: 1px solid red;
+}
+
+.post-slider .post-wrapper{
+    border: dashed red;
+}
+
 
 /* Footer de la page d'accueil*/
 p
@@ -106,42 +115,56 @@ h2{
     text-transform: uppercase;
 }
 
-.footer{
-    align-content: space-between;
-    background: #fdffdc;
-    color: #999;
-    position: absolute;
-
+.bottom.footer-bottom-tex.segment-three p{
+    color: #f9c0c0; !important;
 }
 
-.footer-bottom-text{
-    background: #ccf6c8;
-    color: #999;
-    text-align: center;
-    height: 50px;
-}
 
-/* juste pour la page footer.php*/
-.footer-bottom-tex{
-    background: #ccf6c8;
-    text-align: center;
-    height: 65px;
-
-
-}
 
 /* Page create article*/
-
-
-.btn{
-    color: #f9c0c0;
-    background-color: #ccf6c8;
-    text-align: center;
-}
 
 .titre{
     color: #f9c0c0;
     text-align: center;
+}
+/* Mise en forme des différentes cases couleur */
+.form-control{
+    border: #f9c0c0 solid 1px;
+
+}
+/*menu déroulant catégories*/
+.custom-select{
+    border: #f9c0c0 solid 1px;
+
+}
+
+/*Date et update*/
+.form-row{
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+/*Text area*/
+.form-group{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*bouton submit*/
+.btn{
+    color: #f9c0c0;
+    background-color: #ccf6c8;
+    margin: auto;
+}
+
+.footer-bottom-text{
+    background-color: #ccf6c8;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    justify-content: center;
+
 }
 
 
@@ -151,6 +174,9 @@ h2{
         margin-bottom: 30px;
     }
 }
+
+
+/* MEDIA QUERIE */
 
 @media only screen and (min-width: 767px) and (max-width: 991px){
 
