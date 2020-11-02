@@ -6,34 +6,31 @@
 
 /* La Barre de navigation*/
 
-.navbar{
 
-    border-radius: 5px;
-    margin-bottom: 20px;
 
-}
-
-.navbar-brand{
-    color: #999;
-}
 /*PAGE WRAPPER*/
-.page-wrapper a:hover{
-    color: #f9c0c0;
-
+.page-wrapper a{
+    color: #999;
+    text-decoration: none;
 }
+
 
 /*POST SLIDER*/
 
 .post-slider{
     position: relative;
+    padding-bottom: 100px;
+
 
 }
 
 .post-slider .slider-title{
     text-align: center;
-    margin: 30px auto;
+    margin: 20px auto;
+    padding: 20px 0 30px 0;
     color: #f9c0c0;
 }
+
 
 .post-slider .next{
     position: absolute;
@@ -81,11 +78,12 @@
     height: 290px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+
 }
 
 /* Footer de la page d'accueil*/
+
+
 p
 {
     color: #999;
@@ -100,6 +98,11 @@ h2{
     font-size: 18px;
 }
 
+.segment-one h3:before{
+    content: '|';
+    color: #ccf6c8;
+    padding-right: 10px;
+}
 
 .segment-two h2{
     color: #f9c0c0;
@@ -176,14 +179,21 @@ h2{
     color: #f9c0c0; !important;
 }
 
+/* Page  Log In*/
+.titr{
+    color: #f9c0c0;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 80px;
+}
 
-
-/* Page create article*/
-
+/* Page create article & Log In*/
 .titre{
     color: #f9c0c0;
     text-align: center;
+    padding-top: 30px;
 }
+
 /* Mise en forme des différentes cases couleur */
 .form-control{
     border: #f9c0c0 solid 1px;
