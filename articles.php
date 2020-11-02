@@ -62,7 +62,7 @@
                 <div class="d-flex justify-content-center">
                     <img src=
                         <?php echo $item['image'];?>
-                    class="align-content-center" alt="femme en tenue de sport qui pratique la marche" width="50%">
+                     class="align-content-center" alt="femme en tenue de sport qui pratique la marche" width="50%">
                 </div>
 
                 <!--TODO Ajouter un champ html pour le contenu de l'article. J'ai déjà entré du lorem ipsum dans la BDD sous le nom 'content'-->
@@ -75,6 +75,8 @@
     <br>
 
     <?php require('footer.html'); ?>
+
+
 </body>
 
 </html>

@@ -6,6 +6,9 @@
 require('header.php');
 
 ?>
+<div class="titre">
+<h2 class="display-4">CREER VOTRE ARTICLE</h2>
+</div>
 
 <form action="create_article_traitement.php" method="POST" class="mt-5">
 
@@ -59,6 +62,7 @@ require('header.php');
             </select>
         </div>
 
+
         <!--Date de création-->
         <div class="form-group col-md-6">
             <label>Date</label>
@@ -77,6 +81,7 @@ require('header.php');
         </div>
 
     </div>
+</form>
 
 <?php
 
