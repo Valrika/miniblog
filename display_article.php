@@ -13,15 +13,14 @@ $slug = $_GET["slug"];
 $articles_query = $pdo->query("SELECT * FROM article WHERE slug='$slug'");
 $articles = $articles_query->fetchAll();
 
-var_dump($articles);
-
 //affiche chaque élément de l'article demandé
+//$article contient une liste de lignes, [0] contient la première des lignes, ensuite j'appelle les attributs que je veux ["title"]["content"], etc.
 
-$author = ["author_name"];
-$title = ["title"];
-$category = ["ID_category"];
-$date = ["created_at"];
-$content = ["content"];
+$title = $articles[0]["title"];
+$author = $articles[0]["author_name"];
+$category = $articles[0]["ID_category"];
+$date = $articles[0]["created_at"];
+$content = $articles[0]["content"];
 
 echo $author;
 echo $title;
