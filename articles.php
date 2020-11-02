@@ -20,14 +20,16 @@
     //afficher un nombre d'article maximum par page ?
 
         //appelle la table article et range les articles dans l'ordre antichronologique en joignant la table category à l'entrée category_ID
-        $all_articles = $pdo->query("SELECT * FROM article LEFT JOIN category ON article.ID_category = category.ID ORDER BY article.created_at DESC");
+        //donner explicitement les noms de champs qu'on veut
+        //article.* = permet d'éviter d'aller chercher le slug dans la table category
+        $all_articles = $pdo->query("SELECT article.*, category.category_name FROM article LEFT JOIN category ON article.ID_category = category.ID ORDER BY article.created_at DESC");
         $display_articles = $all_articles->fetchAll();
 
         //boucle for qui affiche tous les articles avec nom de la catégorie, titre, auteur, date de création, date de modification, image, contenu
 
         foreach ($display_articles as $item)
 
-            {
+            {var_dump($item);
     ?>
 
                 <!--titre de la catégorie-->
@@ -40,9 +42,14 @@
                     ?>
                 </h6>
                 
+                <!--RELIRE!!!-->
                 <!--titre de l'article-->
                 <h3 class="text-center">
-                    <?php echo $item['title'];?>
+                    <!--Lien vers la page pour afficher l'article tout seul en passant par le slug-->
+                    <a href="display_article.php?slug=<?php echo $item['slug']; ?>">
+                        <?php echo $item['title'];?>
+                    </a>
+                    
                 </h3><br>
 
 
