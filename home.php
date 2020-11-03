@@ -51,11 +51,15 @@
                     </div>
                 </li>
                 <li class="nav-item active">
+                    <a class="nav-link" href="create_article.php">CREER UN ARTICLE<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
                     <a class="nav-link" href="#">A PROPOS<span class="sr-only">(current)</span></a>
                 </li>
+
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Connectez-vous</button>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><a href="log_in.php">Connectez-vous</button></a>
             </form>
         </div>
     </nav>
