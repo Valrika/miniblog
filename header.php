@@ -49,12 +49,32 @@ CATEGORIES
 <a class="nav-link" href="#">A PROPOS<span class="sr-only">(current)</span></a>
 </li>
 
-</ul>
-<form class="form-inline my-2 my-lg-0">
-<button class="btn btn-outline-success my-2 my-sm-0" type="submit"><a href="log_in.php">Connectez-vous</button></a>
-</form>
-</div>
-</nav>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="articles.php">ARTICLES<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        CATEGORIES
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Sport</a>
+                        <a class="dropdown-item" href="#">Nutrition</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Mompreneuse</a>
+                    </div>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="create_article.php">CREER UN ARTICLE<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="about.php">A PROPOS<span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
 </header>
 
 

@@ -205,6 +205,8 @@ h2{
 
 }
 
+/* CREATE ARTICLE*/
+
 /*Date et update*/
 .form-row{
     margin-left: auto;
@@ -225,6 +227,7 @@ h2{
     margin: auto;
 }
 
+/* FOOTER*/
 .footer-bottom-text{
     background-color: #ccf6c8;
     text-align: center;
@@ -239,8 +242,21 @@ h2{
     text-align: center;
     padding-bottom: 0.5px;
 
-
 }
+
+/* PAGE A PROPOS*/
+
+/*Image*/
+.imgvalrika{
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+/*Paragraphe*/
+ .valrika{
+     text-align: center;
+     margin: 10px 200px 100px 200px;
+ }
 
 
 /*Responsive CSS*/
