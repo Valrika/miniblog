@@ -32,9 +32,12 @@
 </div>
 
 <br>
-<p class="valrika">La beauté d'une femme augmente au fil des ans. La beauté d'une femmme n'est jamais dans l'esthétique,
-    la vrai beauté d'une femme se reflète dans son âme. (inconnu)
+
+<p class="valrika">"La beauté d'une femme augmente au fil des ans. La beauté d'une femmme n'est jamais dans l'esthétique,
+    la vrai beauté d'une femme se reflète dans son âme". (inconnu)
 <br>
+    <br>
+
 C'est aussi ce que nous pensons sur ce blog, la beauté de la femme s'exprime d'une manière beaucoup plus
     subtile et profonde que ce qu'on voudrait nous faire croire. C'est la raison pour laquelle Marika et Valérie
     ont créé cet espace où toutes les femmes sont les bienvennues. Une communauté unie pour partager expériences

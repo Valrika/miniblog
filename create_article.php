@@ -6,6 +6,8 @@
 require('header.php');
 
 ?>
+<html lang="fr">
+<body>
 <div class="titre">
 <h2 class="display-4">CREER VOTRE ARTICLE</h2>
 </div>
