@@ -49,7 +49,7 @@
                     <a href="display_article.php?slug=<?php echo $item['slug']; ?>">
                         <?php echo $item['title'];?>
                     </a>
-                    
+                
                 </h3><br>
 
 
