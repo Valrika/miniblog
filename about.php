@@ -1,7 +1,7 @@
 <?php 
-
-
 //page à propos
+
+require('header.php');
 
 ?>
 

@@ -14,19 +14,35 @@ if (empty($_POST['author_name']) || empty($_POST['title']) || empty($_POST['ID_c
     {
         $author = $_POST["author_name"];
         $title = $_POST["title"];
-        $slug = slugify($titre);
+        $slug = slugify($title);
         $category = $_POST["ID_category"];
         $date = $_POST["created_at"];
         $content = $_POST["content"];
         
-        
-        $sql = "INSERT INTO article (author_name, title, ID_category, slug, created_at, content) VALUES ('$author', '$title', '$category', '$date', '$slug', '$content')";
+        $sql = $pdo->prepare("INSERT INTO article (author_name, title, ID_category, slug, created_at, content) VALUES (:author_name, :title, :ID_category, :slug, :created_at, :content)");
+        $sql->bindParam(':author_name', $author);
+        $sql->bindParam(':title', $title);
+        $sql->bindParam(':ID_category', $category);
+        $sql->bindParam(':slug', $slug);
+        $sql->bindParam(':created_at', $date);
+        $sql->bindParam(':content', $content);
 
-        $pdo->exec($sql);
+        $sql->execute();
+?>
 
+        <h6 class="text-center"> 
+            <?php echo "Votre article a bien été envoyé."; ?>
+        </h6><br>
+    
+
+        <h6 class="text-center">
+        <a href="display_article.php?slug=<?php echo $slug; ?>">
+        Admirez ici le résultat !
+        </a>
+        </h3><br><br>
+
+<?php
     }
 
-    
     require('footer.html');
-
 ?>

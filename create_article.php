@@ -71,6 +71,11 @@ require('header.php');
             <input type="text" class="form-control" name="created_at" placeholder="AAAA/MM/JJ">
         </div>
         
+        <!--TODO champ image-->
+
+        <!--TODO champ alternative-->
+
+
         <!--Contenu de l'article-->
         <div class="form-group col-md-6">
             <label>Texte de votre article</label>

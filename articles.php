@@ -29,7 +29,7 @@
 
         foreach ($display_articles as $item)
 
-            {var_dump($item);
+            {
     ?>
 
                 <!--titre de la catégorie-->
@@ -49,21 +49,24 @@
                     <a href="display_article.php?slug=<?php echo $item['slug']; ?>">
                         <?php echo $item['title'];?>
                     </a>
-                    
+                
                 </h3><br>
 
 
-                <!--TODO Ajouter un champ avec le nom de l'auteur-->
+                <!--nom de l'auteur-->
+                <h6 class="text-center"> 
                 <?php echo $item['author_name'];?>
+                </h6>
 
                 <!--date de création de l'article-->
-                <h6 class="text-center">
+                <h6 class="text-center"> Ecrit le : 
                     <?php echo $item['created_at'];?>
                 </h6>
 
-                <!--TODO Ajouter champ pour afficher la date de mise à jour de l'article-->
+                <!--date de mise à jour de l'article-->
+                <h6 class="text-center">Mis à jour le : 
                 <?php echo $item['updated_at'];?>
-
+                </h6>
         
                 <!--Image d'illustration-->
                 <div class="d-flex justify-content-center">
@@ -71,9 +74,11 @@
                         <?php echo $item['image'];?>
                      class="align-content-center" alt="femme en tenue de sport qui pratique la marche" width="50%">
                 </div>
-
-                <!--TODO Ajouter un champ html pour le contenu de l'article. J'ai déjà entré du lorem ipsum dans la BDD sous le nom 'content'-->
+                
+                <!--Contenu de l'article-->
+                <div class="d-flex justify-content-center">
                 <?php echo $item['content'];?>
+                </div>
     
             <?php
             }
