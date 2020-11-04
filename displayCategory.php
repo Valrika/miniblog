@@ -1,26 +1,20 @@
+<?php
+
+//page pour afficher une catégorie ainsi que tous les articles postés dedans
+//sur chaque article un lien vers la page de l'article tout seul
+
+require('header.php');
+
+$slug = $_GET["slug"];
+
+//sélectionne tout dans la table article où l'ID de la catégorie est égal à l'ID de la table category dont le slug correspond au slug envoyé
+$articles_query = $pdo->query("SELECT * FROM article LEFT JOIN category ON article.ID_category = category_ID WHERE slug='$slug'");
+$article = $articles_query->fetchAll();
 
 
+//affiche chaque article de la catégorie demandée
 
-
-<?php require 'header.php' ?>
-
-
-
-    <?php
-
-    //afficher un nombre d'article maximum par page ?
-    //pour chaque catégorie un lien vers les autres articles de sa catégorie
-
-
-        //appelle la table article et range les articles dans l'ordre antichronologique en joignant la table category à l'entrée category_ID
-        //donner explicitement les noms de champs qu'on veut
-        //article.* = permet d'éviter d'aller chercher le slug dans la table category
-        $all_articles = $pdo->query("SELECT article.*, category.category_name FROM article LEFT JOIN category ON article.ID_category = category.ID ORDER BY article.created_at DESC");
-        $display_articles = $all_articles->fetchAll();
-
-        //boucle for qui affiche tous les articles avec nom de la catégorie, titre, auteur, date de création, date de modification, image, contenu
-
-        foreach ($display_articles as $item)
+foreach ($article as $item)
 
             {
     ?>
@@ -68,26 +62,9 @@
                          class="align-content-center" alt="femme en tenue de sport qui pratique la marche" width="50%">
                 </div>
 
-                <!--Contenu de l'article-->
+            </body>
 
-<!-- Mise en place colonnes Bootstrap -->
+<?php
 
-<div class="container">
-    <div class="row">
-        <div class="col-sm">
-
-            <?php echo $item['content'];?>
-
-        </div>
-    </div>
-</div>
-
-            <?php
-            }
-            ?>
-
-    <br>
-
-    <?php require('footer.html'); ?>
-
-
+    require('footer.html');
+?>
