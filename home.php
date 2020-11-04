@@ -112,16 +112,15 @@
                 <img src="images/bananas.jpg" alt="" class="slider-image">
                 <div class="post-info">
                     <h5><a href="articles.php">Bananas !</a></h5>
-                    <i class="fa fa-user">Marika VALMALETTE</i>
-                    &nbsp;
+                    <i class="fa fa-user">Marika VALMALETTE</i>&nbsp;
                     <i class="fa fa-calendar">Lundi 26 octobre</i>
                 </div>
             </div>
 
             <div class="post">
-                <img src="images/piedsnus.jpg" alt="" class="slider-image">
+                <img src="images/family.jpg" alt="" class="slider-image">
                 <div class="post-info">
-                    <h5><a href="articles.php">Famille MonoParentale</a></h5>
+                    <h5><a href="articles.php">D'amour et d'eau fraîche</a></h5>
                     <i class="fa fa-user">Valérie EKOUME</i>
                     &nbsp;
                     <i class="fa fa-calendar">Lundi 26 octobre</i>
@@ -129,7 +128,7 @@
             </div>
 
             <div class="post">
-                <img src="images/drink.jpg" alt="" class="slider-image">
+                <img src="images/sunsetcouple.jpg" alt="" class="slider-image">
                 <div class="post-info">
                     <h5><a href="articles.php">Besoin d'une pose?</a></h5>
                     <i class="fa fa-user">Valérie EKOUME</i>
@@ -203,7 +202,7 @@
             <!-- colonne 4 NEWSLETTER-->
                 <div class="col-md-3 segment-four md-mb-30 md-mb-30">
                     <h2>NOTRE NEWSLETTER</h2>
-                    <p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                        <p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
                         printer took a galley of type and scrambled it to make a type specimen book. It has survived not </p>
                     <form action="">
                         <input type="email">

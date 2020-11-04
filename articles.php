@@ -1,19 +1,10 @@
-<?php
-
-//Page qui récupère tous les articles publiés et insérés dans la base de données pour les afficher dans l'ordre antichronologique
-
-//TODO modifier ID_catégory pour mettre à la place le name de la catégorie (select juste sur un index ?)
-//Afficher un nombre d'articles maximum par page ?
-
-//
-
-?>
 
 
-        <?php require('header.php'); ?>
 
 
-    
+<?php require 'header.php' ?>
+
+
 
     <?php
 
@@ -41,7 +32,7 @@
                     echo $item['category_name'];
                     ?>
                 </h6>
-                
+
                 <!--RELIRE!!!-->
                 <!--titre de l'article-->
                 <h3 class="text-center">
@@ -49,37 +40,46 @@
                     <a href="display_article.php?slug=<?php echo $item['slug']; ?>">
                         <?php echo $item['title'];?>
                     </a>
-                
+
                 </h3><br>
 
 
                 <!--nom de l'auteur-->
-                <h6 class="text-center"> 
+                <h6 class="text-center">
                 <?php echo $item['author_name'];?>
                 </h6>
 
                 <!--date de création de l'article-->
-                <h6 class="text-center"> Ecrit le : 
+                <h6 class="text-center"> Ecrit le :
                     <?php echo $item['created_at'];?>
                 </h6>
 
                 <!--date de mise à jour de l'article-->
-                <h6 class="text-center">Mis à jour le : 
+                <h6 class="text-center">Mis à jour le :
                 <?php echo $item['updated_at'];?>
                 </h6>
-        
+
                 <!--Image d'illustration-->
                 <div class="d-flex justify-content-center">
-                    <img src=
-                        <?php echo $item['image'];?>
-                     class="align-content-center" alt="femme en tenue de sport qui pratique la marche" width="50%">
+                    <img src=<?php echo $item['image'];?>
+
+                         class="align-content-center" alt="femme en tenue de sport qui pratique la marche" width="50%">
                 </div>
-                
+
                 <!--Contenu de l'article-->
-                <div class="d-flex justify-content-center">
-                <?php echo $item['content'];?>
-                </div>
-    
+
+<!-- Mise en place colonnes Bootstrap -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+
+            <?php echo $item['content'];?>
+
+        </div>
+    </div>
+</div>
+
             <?php
             }
             ?>
@@ -89,6 +89,3 @@
     <?php require('footer.html'); ?>
 
 
-</body>
-
-</html>
