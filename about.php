@@ -75,5 +75,5 @@ C'est aussi ce que nous pensons sur ce blog, la beauté de la femme s'exprime d'
 
 </html>
 
-
+<?php require('footer.html'); ?>
 

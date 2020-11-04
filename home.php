@@ -57,9 +57,9 @@
                 </li>
 
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><a href="log_in.php">Connectez-vous</button></a>
-            </form>
+
+            <a href="log_in.php" ><input class="connect" type="submit"  value="connectez-vous"></a>
+
         </div>
     </nav>
     </header>
@@ -204,8 +204,8 @@
                         <p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
                         printer took a galley of type and scrambled it to make a type specimen book. It has survived not </p>
                     <form action="">
-                        <input type="email">
-                        <input type="submit" value="Subscribe">
+                        <input type="email">&nbsp;
+                        <input type="submit"  value="Subscribe">
                     </form>
                 </div>
                 </div>

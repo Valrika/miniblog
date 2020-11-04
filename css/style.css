@@ -4,16 +4,15 @@
     margin: 0;
 }
 
-/* La Barre de navigation*/
+/* HOME */
 
-
+/* NAVBAR ACCUEIL */
 
 /*PAGE WRAPPER*/
 .page-wrapper a{
     color: #999;
     text-decoration: none;
 }
-
 
 /*POST SLIDER*/
 
@@ -82,7 +81,6 @@
 }
 
 /* Footer de la page d'accueil*/
-
 
 p
 {
@@ -178,11 +176,26 @@ h2{
 .bottom.footer-bottom-tex.segment-three p{
     color: #f9c0c0; !important;
 }
-/* CREATE */
+
+/* ARTICLES */
+
+h5{
+    color: #999;
+    margin-top: 40px;
+}
+
+h6{
+    color: #999;
+}
 
 
 
-/* Page  Log In*/
+.text-center a{
+    text-decoration: none;
+    color: #f9c0c0;
+}
+
+/*LOG IN */
 .titr{
     color: #f9c0c0;
     text-align: center;
@@ -237,7 +250,6 @@ h2{
     padding-top: 15px;
     padding-bottom: 15px;
     justify-content: center;
-
 }
 
 .footer-bottom-tex{

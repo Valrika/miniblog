@@ -1,7 +1,5 @@
 
 
-
-
 <?php require 'header.php' ?>
 
 
@@ -27,11 +25,11 @@
                 <!--je veux appeler la catégorie associée à chaque article
                     catégorie qui se trouve dans une table différente : category
                     mais associée à ID_category dans la table article-->
-                <h6 class="text-center">
+                <h5 class="text-center">
                     <?php
                     echo $item['category_name'];
                     ?>
-                </h6>
+                </h5>
 
                 <!--RELIRE!!!-->
                 <!--titre de l'article-->
