@@ -35,15 +35,9 @@
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     CATEGORIES
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Sport</a>
-                    <a class="dropdown-item" href="#">Nutrition</a>
-                    <a class="dropdown-item" href="#">Mompreneuse</a>
-                </div>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="#">Sport</a>
                     <a class="dropdown-item" href="#">Nutrition</a>
-                    <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">Mompreneuse</a>
                 </div>
             </li>
