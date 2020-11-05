@@ -8,7 +8,7 @@ require('header.php');
 $slug = $_GET["slug"];
 
 //sélectionne tout dans la table article où l'ID de la catégorie est égal à l'ID de la table category dont le slug correspond au slug envoyé
-$articles_query = $pdo->query("SELECT * FROM article LEFT JOIN category ON article.ID_category = category_ID WHERE slug='$slug'");
+$articles_query = $pdo->query("SELECT article.* FROM article LEFT JOIN category ON article.ID_category = category.category_ID WHERE category.slug='$slug'");
 $article = $articles_query->fetchAll();
 
 
@@ -61,10 +61,14 @@ foreach ($article as $item)
 
                          class="align-content-center" alt="femme en tenue de sport qui pratique la marche" width="50%">
                 </div>
+                
+            <?php
+            }
+            ?>
 
-            </body>
 
-<?php
+</body>
 
-    require('footer.html');
-?>
+<?php require('footer.html');?>
+
+</html>
