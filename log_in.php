@@ -1,6 +1,6 @@
-<?php
+<?php require 'header.php' ?>
 
-?>
+
 <html lang="fr">
     <head>
         <title>Beaute O Naturel</title>
