@@ -28,6 +28,9 @@
                     catégorie qui se trouve dans une table différente : category
                     mais associée à ID_category dans la table article-->
                 <h5 class="text-center">
+                    <!--Lien vers la page pour afficher l'article tout seul en passant par le slug
+                    VERIFIER l'AFFICHAGE !!!-->
+                    <a href="displayCategory.php?>
                     <?php
                     echo $item['category_name'];
                     ?>
